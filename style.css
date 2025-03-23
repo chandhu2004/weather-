@@ -1,0 +1,103 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Winky Sans', sans-serif;
+
+
+}
+body{
+    display:flex;
+    justify-content: center;
+    height:100vh;
+    align-items: center;
+    background:linear-gradient(133deg,#4facfe,#00f2fe)
+}
+.container{
+    background:rgb(255, 255, 255);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:4px 6px 15px rgba(0,0,0,0.8);
+    text-align:center;
+    width:350px;
+    
+    
+
+}
+.container.container:hover{
+    transform:scale(1.01);
+    transition: 0.3s ease-in-out;
+}
+h2{
+    font-size:24px;
+    color:#333;
+    margin-bottom:15px;
+
+}
+input{
+    width:80%;
+    padding:10px;
+    border:2px solid #4facfe;
+    border-radius:5px;
+    outline:none;
+    font-size:16px;
+    margin-bottom:10px;
+
+
+
+}
+button{
+    padding:10px 15px;
+    background:#4facfe;
+    border:none;
+    color:white;
+    font-size:18px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow: 4px 6px 15px#333;
+
+}
+button:hover{
+    background:#00c6ff;
+    transform:scale(1.17)
+    
+    
+
+}
+#weatherInfo{
+    margin-top:20px;
+
+}
+#weatherInfo h2{
+    font-size:22px;
+    color:#222;
+}
+#weatherInfo p{
+    font-size:18px;
+    margin-top:5px;
+    color:#555;
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#weatherInfo {
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+#weatherInfo.show {
+    opacity: 1;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
